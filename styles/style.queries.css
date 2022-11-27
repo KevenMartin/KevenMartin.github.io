@@ -7,16 +7,21 @@
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 600px) {
 	body {
-    min-width: 100%;
-    height: 100%;
+		min-width: 100%;
+		height: 100%;
 	}
 
-  h1 {
-    text-align: center;
-  }
+	h1 {
+		font-size: 5rem;
+		-webkit-text-stroke: 2px rgb(255, 255, 255); /* width and color */
+		color: transparent;
+		letter-spacing: 5px;
+		filter: drop-shadow(1rem 0rem 2rem rgb(255, 0, 153));
+		text-align: center;
+	}
 
-  canvas{
-    min-height: 100%;
-    min-width: 100%;
-  }
+	canvas {
+		min-height: 100%;
+		min-width: 100%;
+	}
 }
