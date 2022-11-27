@@ -1,420 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./Public/style.css" />
-    <link rel="stylesheet" href="./Public/style.media.css" />
-    <link rel="icon" type="image/x-icon" href="./Public/Images/logo.png" />
-    <script
-      src="https://kit.fontawesome.com/aba54a23c4.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Calp Piso News</title>
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./styles/style.css" />
+		<link rel="stylesheet" href="./styles/style.queries.css">
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="titleContainer">
+			<h1>NON RIEN</h1>
+		</div>
+		<script src="three.min.js"></script>
+		<script>
+			let scene, camera, renderer, stars, starGeo;
 
-  <body>
-    <!----------------------------------------HEADER------------------------------------------->
-    <div class="page-header"></div>
-    <header>
-      <div class=".logo">
-        <img src="./Public/Images/logo.png" alt="" />
-      </div>
-      <span class="menu-header">
-        <a href="#member_jumper">Become member</a>
-        <a href="#logIn_jumper">Log in</a>
-        <span class="menu-button">
-          <a class="subscribeBtn" href="#">Subscribe</a>
-        </span>
-      </span>
-    </header>
-    <!----------------------------------------MENU------------------------------------------->
-    <div class="nav">
-      <input type="checkbox" id="nav-check" />
-      <div class="nav-header"></div>
-      <div class="nav-btn">
-        <label for="nav-check">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-      </div>
+			function init() {
+				//Create Scene object
+				scene = new THREE.Scene();
 
-      <div class="nav-links">
-        <a href="#tech_jumper">TECH</a>
-        <a href="#fashion_jumper">FASHION</a>
-        <a href="#" target="_blank">POLITICS</a>
-        <a href="#" target="_blank">SOCIAL</a>
-        <a href="#" target="_blank">SHOP</a>
-        <a href="#" target="_blank">BLOG</a>
-      </div>
-    </div>
+				//setup camera facing upward
+				camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
+				camera.position.z = 1;
+				camera.rotation.x = Math.PI / 2;
 
-    <!----------------------------------------SHOWCASE----------------------------------------->
+				//setup renderer
+				renderer = new THREE.WebGLRenderer();
+				renderer.setSize(window.innerWidth, window.innerHeight);
+				document.body.appendChild(renderer.domElement);
 
-    <div class="neon-container">
-      <div class="neon"></div>
-    </div>
-    <div class="body-wrapper">
-      <div class="showcase-container">
-        <div class="side-elem">
-          <div class="side-img">
-            <img src="./Public/Images/skeletor.jpg" alt="" />
-          </div>
-          <div class="side-title">
-            <h3>
-              SKELETOR succeed his throne to <u>SEBASTIEN HOULE</u> - The new
-              master of the universe
-            </h3>
-          </div>
-          <div class="side-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-            recusandae nisi placeat accusamus molestiae assumenda, ipsum
-            sapiente repudiandae, maiores nemo, earum architecto ratione
-            reprehenderit non cumque eveniet eaque adipisci laudantium? Sit
-            reprehenderit, ratione facere beatae quia ipsum tempora, explicabo
-            enim tempore unde aspernatur totam excepturi at quae nam
-            perspiciatis quod expedita. Nihil cum ducimus pariatur ad
-            blanditiis. Incidunt, quia ducimus.
-          </div>
-          <span class="author">Calp Piso</span>
-          <span class="timestamp"
-            >June 22 1953 - 60 min
-            <button><i class="fa-solid fa-star"></i></button>
-          </span>
-        </div>
+				starGeo = new THREE.Geometry();
+				for (let i = 0; i < 6000; i++) {
+					star = new THREE.Vector3(Math.random() * 600 - 300, Math.random() * 600 - 300, Math.random() * 600 - 300);
+					star.velocity = 0;
+					star.acceleration = 0.005;
+					starGeo.vertices.push(star);
+				}
 
-        <div class="center-container">
-          <div class="center-elem">
-            <div class="center-img">
-              <img src="./Public/Images/westfalia.jpg" alt="" />
-            </div>
-            <div class="center-title"><h3>HOME IS WHERE YOUR BUS IS</h3></div>
-            <div class="center-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum exercitationem saepe non libero, pariatur aperiam
-              corrupti dolores expedita nobis odio corporis reiciendis incidunt
-              perferendis deleniti ratione odit, optio consectetur beatae.
-            </div>
-            <div class="author">Calp Piso</div>
-            <div class="timestamp">
-              March 31 1978 - 6 min
-              <button><i class="fa-solid fa-star"></i></button>
-            </div>
-          </div>
+				starGeoGreen = new THREE.Geometry();
+				for (let i = 0; i < 3000; i++) {
+					star = new THREE.Vector3(Math.random() * 600 - 300, Math.random() * 600 - 300, Math.random() * 600 - 300);
+					star.velocity = 0;
+					star.acceleration = 0.005;
+					starGeoGreen.vertices.push(star);
+				}
 
-          <div class="center-elem">
-            <div class="center-img">
-              <img src="./Public/Images/vintage-color.jpg" alt="" />
-            </div>
-            <div class="center-title"><h3>Goodbye Charlie!</h3></div>
-            <div class="center-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum exercitationem saepe non libero, pariatur aperiam
-              corrupti dolores expedita nobis odio corporis reiciendis incidunt
-              perferendis deleniti ratione odit, optio consectetur beatae.
-            </div>
-            <div class="author">Calp Piso</div>
-            <div class="timestamp">
-              December 21 1968 - 8 min
-              <button><i class="fa-solid fa-star"></i></button>
-            </div>
-          </div>
+				let sprite = new THREE.TextureLoader().load("./images/star.png");
+				let starMaterial = new THREE.PointsMaterial({
+					color: 0xbae7ff,
+					size: 0.7,
+					map: sprite,
+				});
 
-          <div class="center-elem">
-            <div class="center-img">
-              <img src="./Public/Images/1955_Pontiac-01 (Large).jpg" alt="" />
-            </div>
-            <div class="center-title">
-              <h3>Get yourself a nice 1955 Pontiac</h3>
-            </div>
-            <div class="center-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum exercitationem saepe non libero, pariatur aperiam
-              corrupti dolores expedita nobis odio corporis reiciendis incidunt
-              perferendis deleniti ratione odit, optio consectetur beatae.
-            </div>
-            <div class="author">Calp Piso</div>
-            <div class="timestamp">
-              December 26 1954 - 3 min
-              <button><i class="fa-solid fa-star"></i></button>
-            </div>
-          </div>
-        </div>
+				let greenSprite = new THREE.TextureLoader().load("./images/star.png");
+				let starMaterial1 = new THREE.PointsMaterial({
+					color: 0xff8ac1,
+					size: 0.1,
+					map: greenSprite,
+				});
 
-        <div class="side-elem">
-          <div class="side-img">
-            <img src="./Public/Images/birds_eye_1956.jpg" alt="" />
-          </div>
-          <div class="side-title">
-            <h3>Enter the RCA VICTOR birds eye CONTEST</h3>
-          </div>
-          <div class="side-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-            recusandae nisi placeat accusamus molestiae assumenda, ipsum
-            sapiente repudiandae, maiores nemo, earum architecto ratione
-            reprehenderit non cumque eveniet eaque adipisci laudantium? Sit
-            reprehenderit, ratione facere beatae quia ipsum tempora, explicabo
-            enim tempore unde aspernatur totam excepturi at quae nam
-            perspiciatis quod expedita. Nihil cum ducimus pariatur ad
-            blanditiis. Incidunt, quia ducimus.
-          </div>
-          <span class="author">Calp Piso</span>
-          <span class="timestamp"
-            >April 23 1956 - 1 min
-            <button><i class="fa-solid fa-star"></i></button
-          ></span>
-        </div>
-      </div>
-      <!----------------------------------------PALMTREES-------------------------------------->
-      <div class="palmtrees">
-        <img src="./Public/Images/palmtrees.png" alt="" />
-      </div>
+				stars = new THREE.Points(starGeo, starMaterial);
+				stars2 = new THREE.Points(starGeoGreen, starMaterial1);
 
-      <!----------------------------------------HERO BANNER------------------------------------->
+				scene.add(stars);
+				scene.add(stars2);
 
-      <div class="hero-banner1">
-        <img class="hero-banner1" src="./Public/Images/vaporwave1.png" alt="" />
-      </div>
+				window.addEventListener("resize", onWindowResize, false);
 
-      <!----------------------------------------ADS------------------------------------------->
-      <div class="advert">
-        <div class="advert-img">
-          <img src="./Public/Images/ads.png" alt="" />
-        </div>
-        <div class="div2"><h1>GODZILLA - ALL NEW !</h1></div>
-        <div class="div3">
-          <p>Get a chance to visit you favorite breathing fire monster !</p>
-        </div>
-        <div class="advert-form">
-          <input
-            class="emailEntry"
-            type="email"
-            placeholder="Enter your email address"
-          />
-          <a class="subscribeBtn" href="#">Subscribe</a>
-        </div>
-      </div>
-      <span id="tech_jumper"></span>
-      <!----------------------------------------HERO-BANNER------------------------------------>
-      <div class="hero-banner">
-        <img class="hero-banner" src="./Public/Images/vaporwave2.png" alt="" />
-      </div>
-      <!----------------------------------------CONTENT---------------------------------------->
-      <!-----------------------------------TECH------------------------------------>
+				animate();
+				animateGreen();
+			}
+			function onWindowResize() {
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+				renderer.setSize(window.innerWidth, window.innerHeight);
+			}
 
-      <section class="content">
-        <div class="tech">
-          <h2>Science & Technology</h2>
-          <div class="neon-container">
-            <div class="neon"></div>
-          </div>
-          <br />
-          <div class="tech-container">
-            <div class="tech-img">
-              <img src="./Public/Images/horse.jpg" alt="" />
-            </div>
-            <div class="tech-title">
-              <h2>Meet the first-ever half-robot half-horse</h2>
-            </div>
-            <div class="tech-text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
-              excepturi asperiores commodi provident, velit repudiandae dolorem.
-              Et soluta asperiores incidunt praesentium. Fuga maiores
-              perspiciatis harum quis sed aperiam officiis voluptates!
-            </div>
-            <div class="tech-author">Calp Piso</div>
-            <div class="tech-timestamp">
-              april 21 1961 - 17 min<button>
-                <i class="fa-solid fa-star"></i>
-              </button>
-            </div>
-          </div>
+			function animate() {
+				starGeo.vertices.forEach((p) => {
+					p.velocity += p.acceleration;
+					p.y -= p.velocity;
 
-          <div class="tech-container">
-            <div class="tech-img">
-              <img src="./Public/Images/gradients.jpg" alt="" />
-            </div>
-            <div class="tech-title">
-              <h2>What You Need to Know about the Lunar Eclipse</h2>
-            </div>
-            <div class="tech-text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
-              excepturi asperiores commodi provident, velit repudiandae dolorem.
-              Et soluta asperiores incidunt praesentium. Fuga maiores
-              perspiciatis harum quis sed aperiam officiis voluptates!
-            </div>
-            <div class="tech-author">Calp Piso</div>
-            <div class="tech-timestamp">
-              november 30 1972 - 21 min<button>
-                <i class="fa-solid fa-star"></i>
-              </button>
-            </div>
-          </div>
+					if (p.y < -200) {
+						p.y = 200;
+						p.velocity = 0;
+					}
+				});
+				starGeo.verticesNeedUpdate = true;
+				stars.rotation.y += 0.0;
 
-          <div class="tech-container">
-            <div class="tech-img">
-              <img src="./Public/Images/reality-augmented.jpg" alt="" />
-            </div>
-            <div class="tech-title">
-              <h2>
-                What It Will Take for Augmented Reality to Become Our Reality
-              </h2>
-            </div>
-            <div class="tech-text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
-              excepturi asperiores commodi provident, velit repudiandae dolorem.
-              Et soluta asperiores incidunt praesentium. Fuga maiores
-              perspiciatis harum quis sed aperiam officiis voluptates!
-            </div>
-            <div class="tech-author">Calp Piso</div>
-            <div class="tech-timestamp">
-              march 14 1972 - 32 min<button>
-                <i class="fa-solid fa-star"></i>
-              </button>
-            </div>
-          </div>
+				renderer.render(scene, camera);
+				requestAnimationFrame(animate);
+			}
 
-          <span id="fashion_jumper"></span>
-          <h2>Fashion</h2>
-          <div class="neon-container">
-            <div class="neon"></div>
-          </div>
-          <br />
-          <div class="tech-container">
-            <div class="tech-img">
-              <img src="./Public/Images/retro-new-wave-girl.PNG" alt="" />
-            </div>
-            <div class="tech-title">
-              <h2>Voted best dressed woman of the year</h2>
-            </div>
-            <div class="tech-text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
-              excepturi asperiores commodi provident, velit repudiandae dolorem.
-              Et soluta asperiores incidunt praesentium. Fuga maiores
-              perspiciatis harum quis sed aperiam officiis voluptates!
-            </div>
-            <div class="tech-author">Calp Piso</div>
-            <div class="tech-timestamp">
-              september 12 1975 - 1 min<button>
-                <i class="fa-solid fa-star"></i>
-              </button>
-            </div>
-          </div>
+			function animateGreen() {
+				starGeoGreen.vertices.forEach((p) => {
+					p.velocity += p.acceleration;
+					p.y -= p.velocity;
 
-          <div class="tech-container">
-            <div class="tech-img">
-              <img src="./Public/Images/vaporwave.jpg" alt="" />
-            </div>
-            <div class="tech-title"><h2>RETRO and CHILL</h2></div>
-            <div class="tech-text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
-              excepturi asperiores commodi provident, velit repudiandae dolorem.
-              Et soluta asperiores incidunt praesentium. Fuga maiores
-              perspiciatis harum quis sed aperiam officiis voluptates!
-            </div>
-            <div class="tech-author">Calp Piso</div>
-            <div class="tech-timestamp">
-              august 21 1967 - 3 min<button>
-                <i class="fa-solid fa-star"></i>
-              </button>
-            </div>
-          </div>
+					if (p.y < -200) {
+						p.y = 200;
+						p.velocity = 0;
+					}
+				});
+				starGeoGreen.verticesNeedUpdate = true;
+				stars.rotation.y += 0.0;
 
-          <div class="tech-container">
-            <div class="tech-img">
-              <img src="./Public/Images/has-everything.jpg" alt="" />
-            </div>
-            <div class="tech-title"><h2>A brand for him AND for her</h2></div>
-            <div class="tech-text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
-              excepturi asperiores commodi provident, velit repudiandae dolorem.
-              Et soluta asperiores incidunt praesentium. Fuga maiores
-              perspiciatis harum quis sed aperiam officiis voluptates!
-            </div>
-            <div class="tech-author">Calp Piso</div>
-            <div class="tech-timestamp">
-              october 22 1976 - 8 min<button>
-                <i class="fa-solid fa-star"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <!----------------------------------------FAVS------------------------------------------->
-        <div class="favs">
-          <h2>Populaires</h2>
-          <div class="neon-container">
-            <div class="neon"></div>
-          </div>
-          <br />
-          <div class="popular">
-            <div class="fav-number"><h1>01</h1></div>
-            <div class="fav-text">
-              <h2>"GROUND BREAKING" Rise of the robots</h2>
-            </div>
-            <div class="fav-timestamp">
-              April 12 1965- 1 min
-              <button><i class="fa-solid fa-star"></i></button>
-            </div>
-            <div class="fav-author">calp piso</div>
-          </div>
-
-          <div class="popular">
-            <div class="fav-number"><h1>02</h1></div>
-            <div class="fav-text">
-              <h2>
-                Fliyng machine takes to Saturn, a new era is about to begin.
-              </h2>
-            </div>
-            <div class="fav-timestamp">
-              March 13 1971 - 2 min
-              <button><i class="fa-solid fa-star"></i></button>
-            </div>
-            <div class="fav-author">calp piso</div>
-          </div>
-
-          <div class="popular">
-            <div class="fav-number">
-              <h1>03</h1>
-            </div>
-            <div class="fav-text">
-              <h2>
-                Americans, first on jupiter - A new beginning for the humankind
-              </h2>
-            </div>
-            <div class="fav-timestamp">
-              May 17 1956 - 1 min
-              <button><i class="fa-solid fa-star"></i></button>
-            </div>
-            <div class="fav-author">calp piso</div>
-          </div>
-
-          <div class="popular">
-            <div class="fav-number"><h1>04</h1></div>
-            <div class="fav-text">
-              <h2>Spock dead at 83, boldly goes to final frontier</h2>
-            </div>
-            <div class="fav-timestamp">
-              February 18 1952 - 1 min
-              <button><i class="fa-solid fa-star"></i></button>
-            </div>
-            <div class="fav-author">calp piso</div>
-          </div>
-
-          <div class="popular">
-            <div class="fav-number"><h1>05</h1></div>
-            <div class="fav-text">
-              <h2>WAR AGAINST MARS IS FINALLY OVER</h2>
-            </div>
-            <div class="fav-timestamp">
-              March 21 1948 - 1 min
-              <button><i class="fa-solid fa-star"></i></button>
-            </div>
-            <div class="fav-author">calp piso</div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </body>
+				renderer.render(scene, camera);
+				requestAnimationFrame(animateGreen);
+			}
+			init();
+		</script>
+	</body>
 </html>

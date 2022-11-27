@@ -1,0 +1,39 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  font-family: futura;
+}
+h1,
+p {
+	margin: 0 0 1em;
+}
+
+canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.titleContainer {
+	background-color: transparent;
+	height: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+h1 {
+	font-size: 5rem;
+	-webkit-text-stroke: 2px rgb(255, 255, 255); /* width and color */
+	color: transparent;
+  letter-spacing: 5px;
+  filter: drop-shadow(1rem 0rem 2rem rgb(255, 0, 153));
+}
+
