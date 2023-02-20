@@ -1,4 +1,4 @@
-/* let text = ["Bonjour", "Hi", "kwei", "Hola", "Guten Tag", "ni hao", "Salam", "privet", "konnichiwa"];
+let text = ["Bonjour", "Hi", "kwei", "Hola", "Guten Tag", "ni hao", "Salam", "privet", "konnichiwa"];
 let counter = 1;
 let elem = document.getElementById("word");
 let inst = setInterval(change, 1250);
@@ -50,5 +50,3 @@ document.addEventListener("mousemove", (e) => {
 document.addEventListener("touchmove", (e) => {
 	move(e);
 });
- */
-
