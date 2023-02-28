@@ -877,27 +877,11 @@ ul {
 		text-align: center;
 	}
 
-	.p-titleVw {
-		font-size: 30px;
-		text-align: left;
-	}
-
 	.svgContainer svg {
 		position: absolute;
 		top: 10vw;
 		left: 0vw;
 		height: 50vh;
-	}
-	.containerVaporwave {
-		max-height: 100vh !important;
-		overflow-y: hidden;
-	}
-	.svgContainerVw svg {
-		position: absolute;
-		top: 0vh;
-		left: 0vw;
-		height: 86vh;
-		width: 50vw;
 	}
 
 	.info-container {
@@ -910,22 +894,6 @@ ul {
 		font-size: 16px;
 		left: 50%;
 		transform: translate(-50%, 0);
-	}
-
-	.info-containerVw {
-		position: block;
-		top: 20vh;
-		height: auto;
-		width: 90vw;
-		line-height: 4vh;
-		font-weight: 100;
-		font-size: 9px;
-		left: 50%;
-		transform: translate(-50%, 0);
-	}
-
-	.toCome {
-		margin-left: 0vw;
 	}
 
 	.utilities {
@@ -966,6 +934,40 @@ ul {
 	#imgPortfolio {
 		margin: 0 auto;
 		width: 100vw;
+	}
+
+	.p-titleVw {
+		font-size: 3.5rem;
+		text-align: center;
+	}
+
+	.containerVaporwave {
+		max-height: 100vh !important;
+		overflow-y: hidden;
+	}
+
+	.svgContainerVw svg {
+		position: absolute;
+		top: -4vh;
+		left: 0vw;
+		height: 100vh;
+		width: 100vw;
+	}
+
+	.info-containerVw {
+		position: block;
+		top: 15vh;
+		height: auto;
+		width: 90vw;
+		line-height: 4vh;
+		font-weight: 100;
+		font-size: 9px;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+
+	.toCome {
+		margin-left: 0vw;
 	}
 }
 
