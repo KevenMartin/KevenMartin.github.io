@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/style.css" />
+		<title>VAPORWAVE</title>
+	</head>
+	<body>
+		<h1 class="p-title">VAPORWAVE</h1>
+
+		<div class="svgContainerVw">
+			<svg id="vaporwave" width="1030" height="647" viewBox="0 0 1030 647" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M275 266.257C341.5 -122.743 803 -50.2427 827.5 266.257H275Z" stroke="hotpink" />
+				<path d="M827.5 283.757C824.5 282.015 278 283 275 283.757C272 284.515 278 307.015 281 308.757C284 310.5 820 311.015 824.5 308.757C829 306.5 830.5 285.5 827.5 283.757Z" stroke="hotpink" />
+				<path d="M824.5 324.257C822.5 321.5 286.5 323.5 281 324.257C275.5 325.015 286.5 353.515 289 352.757C291.5 352 816 354.515 819 352.757C822 351 826.5 327.015 824.5 324.257Z" stroke="hotpink" />
+				<path d="M809 374.757C807.5 373 297 374 294 374.757C291 375.515 304.5 401.515 306.5 400.257C308.5 399 794 401.515 797.5 400.257C801 399 810.5 376.515 809 374.757Z" stroke="hotpink" />
+				<path d="M774.5 431.257C770.5 429.015 333.5 432 328 431.257C322.5 430.515 348 464.515 351.5 464.257C355 464 749 466.015 754 464.257C759 462.5 778.5 433.5 774.5 431.257Z" stroke="hotpink" />
+				<path d="M390 498.757C503.418 560.046 573.865 559.782 711.5 498.757H390Z" stroke="hotpink" />
+				<path d="M744.5 646H1L114.5 608.5L158.5 619L269.5 583.5L312.5 598L419.5 454.5L472 532.5L579 345L704.362 573M744.5 646L704.362 573M744.5 646H1029L906.5 590L841 608.5L726 553.5L704.362 573" stroke="orangered" />
+			</svg>
+		</div>
+
+		<div class="info-container">
+			<h1 class="toCome">A VENIR ...</h1>
+		</div>
+
+		<script>
+			const rose = document.querySelectorAll("#vaporwave path");
+
+			console.log(rose);
+
+			for (let i = 0; i < rose.length; i++) {
+				console.log(`Letter ${i} is ${rose[i].getTotalLength()}`);
+			}
+
+			const vaporwave = document.querySelector("#vaporwave");
+			const pathElements = vaporwave.querySelectorAll("path");
+
+			// Ajoute la classe 'start' à l'élément #vaporwave au chargement de la page
+			vaporwave.classList.add("start");
+
+			const options = {
+				root: null,
+				rootMargin: "0px",
+				threshold: 0, // Pourcentage de l'élément qui doit être visible pour déclencher l'animation
+			};
+
+			const observer = new IntersectionObserver(function (entries, observer) {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						vaporwave.classList.add("animate"); // Ajoute une classe CSS pour déclencher l'animation
+						observer.unobserve(entry.target); // Arrête l'observation une fois que l'élément a été animé
+					}
+				});
+			}, options);
+
+			observer.observe(vaporwave);
+		</script>
+	</body>
+</html>
