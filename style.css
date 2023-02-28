@@ -868,6 +868,10 @@ ul {
 	/*PROJECT RESPONSIVE*/
 	/* WHISKEY */
 
+	.mobileContainer {
+		overflow-x: hidden;
+	}
+
 	.p-title {
 		font-size: 80px;
 		text-align: center;
