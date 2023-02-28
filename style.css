@@ -161,7 +161,7 @@ nav .links a {
 }
 
 #mobile {
-	display: none;
+	visibility: hidden;
 }
 
 /*-----------------------------COMPÉTENCES----------------------------------*/
@@ -746,6 +746,10 @@ ul {
 
 	#desktop {
 		display: none;
+	}
+
+	#mobile {
+		visibility: visible;
 	}
 
 	.title {
