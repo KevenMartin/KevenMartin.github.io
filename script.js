@@ -1,7 +1,13 @@
 window.addEventListener("scroll", function (e) {
 	const target = this.document.querySelectorAll(".scroll");
-	/* 	target.style.background = "#ffcc00"; */
+
 	let scrolled = window.pageYOffset;
+	const totalHeight = document.body.clientHeight - window.innerHeight;
+
+	if (scrolled >= totalHeight) {
+		return;
+	}
+
 	let index = 0,
 		length = target.length;
 	for (index; index < length; index++) {
