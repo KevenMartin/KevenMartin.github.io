@@ -877,11 +877,17 @@ ul {
 		text-align: center;
 	}
 
-	.svgContainer svg {
+	.svgContainer svg,
+	.svgContainerZc svg,
+	.svgContainerLd svg {
 		position: absolute;
 		top: 10vw;
 		left: 0vw;
 		height: 50vh;
+	}
+
+	.svgContainerZc svg {
+		top: 20vw;
 	}
 
 	.info-container {
@@ -894,6 +900,10 @@ ul {
 		font-size: 16px;
 		left: 50%;
 		transform: translate(-50%, 0);
+	}
+
+	.info-containerZc {
+		top: 55vh;
 	}
 
 	.utilities {
@@ -936,6 +946,7 @@ ul {
 		width: 100vw;
 	}
 
+	/*vaporwave*/
 	.p-titleVw {
 		font-size: 3.5rem;
 		text-align: center;
@@ -969,6 +980,8 @@ ul {
 	.toCome {
 		margin-left: 0vw;
 	}
+
+	/*zencafe*/
 }
 
 /* Smartphones en orientation paysage */
