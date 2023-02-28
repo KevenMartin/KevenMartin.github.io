@@ -439,6 +439,30 @@ svg {
 	border: 1px solid black;
 	width: 100%;
 }
+
+.projectWrapper .whiskeyProject a {
+	text-decoration: none;
+	color: antiquewhite;
+	transition: 1s;
+}
+
+.projectWrapper .vaporwave a {
+	text-decoration: none;
+	color: antiquewhite;
+	transition: 1s;
+}
+
+.projectWrapper .zenCafe a {
+	text-decoration: none;
+	color: antiquewhite;
+	transition: 1s;
+}
+
+.projectWrapper .ledorProject a {
+	text-decoration: none;
+	color: antiquewhite;
+	transition: 1s;
+}
 /*-----------------------------CONTACT----------------------------------*/
 
 .contactContainer {
@@ -447,7 +471,7 @@ svg {
 	justify-content: space-around;
 	align-self: center;
 	align-items: center;
-	height: 100vh;
+	max-height: 100vh;
 }
 
 .contactTitle {
@@ -745,7 +769,7 @@ ul {
 	}
 
 	body {
-		height: 100% !important;
+		/* 		height: 100% !important; */
 	}
 
 	#desktop {
