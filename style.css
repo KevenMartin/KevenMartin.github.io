@@ -884,10 +884,12 @@ ul {
 		position: block;
 		top: 50vh;
 		height: 100%;
-		width: 100%;
+		width: 90vw;
 		line-height: 4vh;
 		font-weight: 100;
-		font-size: 20px;
+		font-size: 16px;
+		left: 50%;
+		transform: translate(-50%, 0);
 	}
 
 	.toCome {
@@ -901,12 +903,17 @@ ul {
 		font-weight: 100;
 	}
 
+	.utilities h2 {
+		font-size: 20px;
+		max-width: 90vw;
+	}
+
 	ul {
 		list-style: none;
 	}
 
 	li {
-		font-size: 24px;
+		font-size: 18px;
 	}
 
 	.singleProduct h1 {
