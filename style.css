@@ -745,6 +745,10 @@ ul {
 		overflow-x: hidden;
 	}
 
+	body {
+		height: 100% !important;
+	}
+
 	#desktop {
 		display: none;
 	}
