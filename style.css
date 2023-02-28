@@ -864,6 +864,70 @@ ul {
 		font-size: 15vw;
 		margin: 10px;
 	}
+
+	/*PROJECT RESPONSIVE*/
+	/* WHISKEY */
+
+	.p-title {
+		font-size: 80px;
+		text-align: center;
+	}
+
+	.svgContainer svg {
+		position: absolute;
+		top: 10vw;
+		left: 0vw;
+		height: 50vh;
+	}
+
+	.info-container {
+		position: block;
+		top: 50vh;
+		height: 100%;
+		width: 100%;
+		line-height: 4vh;
+		font-weight: 100;
+		font-size: 20px;
+	}
+
+	.toCome {
+		margin-left: 5vw;
+	}
+
+	.utilities {
+		text-align: center;
+		height: 50vh;
+		text-decoration: none;
+		font-weight: 100;
+	}
+
+	ul {
+		list-style: none;
+	}
+
+	li {
+		font-size: 24px;
+	}
+
+	.singleProduct h1 {
+		background-color: black;
+		color: antiquewhite;
+		text-align: center;
+		width: 100vw;
+		margin: 0 auto;
+		margin-top: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	.img-container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#imgPortfolio {
+		margin: 0 auto;
+		width: 100vw;
+	}
 }
 
 /* Smartphones en orientation paysage */
