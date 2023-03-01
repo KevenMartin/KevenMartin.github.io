@@ -45,34 +45,24 @@ document.addEventListener("touchmove", (e) => {
 	move(e);
 });
 
-/* const rose = document.querySelectorAll("#rose path");
-
-console.log(rose);
-
-for (let i = 0; i < rose.length; i++) {
-	console.log(rose[i].getTotalLength());
-}
- */
-
 const competences = document.querySelector("#competences");
 const rose = document.querySelector("#rose");
 const rosePathElements = rose.querySelectorAll("path");
 const pathElements = competences.querySelectorAll("path");
 
-// Ajoute la classe 'start' à l'élément #competences au chargement de la page
 competences.classList.add("start");
 
 const options = {
 	root: null,
 	rootMargin: "0px",
-	threshold: 0.9, // Pourcentage de l'élément qui doit être visible pour déclencher l'animation
+	threshold: 0.9,
 };
 
 const observer = new IntersectionObserver(function (entries, observer) {
 	entries.forEach((entry) => {
 		if (entry.isIntersecting) {
-			competences.classList.add("animate"); // Ajoute une classe CSS pour déclencher l'animation
-			observer.unobserve(entry.target); // Arrête l'observation une fois que l'élément a été animé
+			competences.classList.add("animate");
+			observer.unobserve(entry.target);
 		}
 	});
 }, options);

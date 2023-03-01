@@ -54,29 +54,22 @@
 		<script>
 			const rose = document.querySelectorAll("#ledor path");
 
-			console.log(rose);
-
-			for (let i = 0; i < rose.length; i++) {
-				console.log(`Letter ${i} is ${rose[i].getTotalLength()}`);
-			}
-
 			const ledor = document.querySelector("#ledor");
 			const pathElements = ledor.querySelectorAll("path");
 
-			// Ajoute la classe 'start' à l'élément #ledor au chargement de la page
 			ledor.classList.add("start");
 
 			const options = {
 				root: null,
 				rootMargin: "0px",
-				threshold: 0, // Pourcentage de l'élément qui doit être visible pour déclencher l'animation
+				threshold: 0, 
 			};
 
 			const observer = new IntersectionObserver(function (entries, observer) {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
-						ledor.classList.add("animate"); // Ajoute une classe CSS pour déclencher l'animation
-						observer.unobserve(entry.target); // Arrête l'observation une fois que l'élément a été animé
+						ledor.classList.add("animate"); 
+						observer.unobserve(entry.target); 
 					}
 				});
 			}, options);

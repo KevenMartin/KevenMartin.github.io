@@ -1,11 +1,3 @@
-/* .line {
-	height: 5px;
-	background-color: black;
-	transition: width 0.5s ease;
-	z-index: 9999;
-	position: absolute;
-	top: 430px;
-} */
 
 #shape {
 	background: linear-gradient(64deg, #00ffb6 10%, #ff006f 60%);
@@ -100,7 +92,6 @@ body {
 	background-color: antiquewhite;
 	color: black;
 	font-family: futura;
-	/* 	height: 100vh; */
 	overflow-x: hidden;
 	text-transform: uppercase;
 	margin-top: 2rem;
@@ -170,16 +161,6 @@ nav .links a {
 	margin-top: 10rem;
 }
 
-/* .compTitle {
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	margin: 0;
-	font-size: 7.5vw;
-	color: transparent;
-	-webkit-text-stroke: 5px black;
-	position: relative;
-} */
 
 svg {
 	width: 100vw;
@@ -190,10 +171,6 @@ svg {
 	animation: fill 1s ease forwards 3s;
 }
 
-/* #competences.start path {
-	stroke-dasharray: 0;
-	stroke-dashoffset: 0;
-} */
 
 #competences.animate path {
 	animation: line-animation 2s ease forwards;
@@ -299,7 +276,6 @@ svg {
 
 .skillsContainer {
 	height: 100vh;
-	/* 	border-top: 5px solid black; */
 	margin-top: 10vh;
 	display: flex;
 	flex-direction: row;
@@ -1027,11 +1003,6 @@ ul {
 	}
 
 	.techContent {
-		/* 		display: flex;
-		flex-direction: row;
-		justify-content: space-evenly;
-		font-size: 18px;
-		width: 100%; */
 		display: none;
 	}
 
@@ -1107,56 +1078,13 @@ ul {
 
 /* Smartphones en orientation paysage */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-	/* Mettez votre CSS ici pour les smartphones en orientation paysage */
+
 }
 
 /* Tablettes en orientation portrait */
 @media only screen and (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
-	/* Mettez votre CSS ici pour les tablettes en orientation portrait */
 }
 
 /* Tablettes en orientation paysage */
 @media only screen and (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
-	/* Mettez votre CSS ici pour les tablettes en orientation paysage */
 }
-
-/* Écrans d'ordinateurs portables */
-/* @media only screen and (min-width: 1025px) and (max-width: 1366px) {
-	.title {
-		height: 80vh;
-		margin-top: 1rem;
-	}
-
-	.title h1 {
-		margin: -2rem 0rem;
-	}
-
-	.title h1 p {
-		width: 35%;
-		line-height: 49px;
-	}
-} */
-
-/* Écrans d'ordinateurs de bureau */
-/* @media only screen and (min-width: 1367px) {
-	.title {
-		height: calc(100vh - 2.3rem);
-		display: flex;
-		flex-direction: column;
-		align-self: center;
-		justify-content: center;
-	}
-
-	.title h1 {
-		display: flex;
-		align-items: flex-start;
-		gap: 10rem;
-		margin: 0;
-		font-size: 288px;
-	}
-
-	.title h1 p {
-		width: 23%;
-		line-height: 41px;
-	}
-} */
