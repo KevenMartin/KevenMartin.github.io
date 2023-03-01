@@ -36,29 +36,25 @@
 		<script>
 			const rose = document.querySelectorAll("#vaporwave path");
 
-			console.log(rose);
+			/* 			for (let i = 0; i < rose.length; i++) {
 
-			for (let i = 0; i < rose.length; i++) {
-				console.log(`Letter ${i} is ${rose[i].getTotalLength()}`);
-			}
+			} */
 
 			const vaporwave = document.querySelector("#vaporwave");
 			const pathElements = vaporwave.querySelectorAll("path");
-
-			// Ajoute la classe 'start' à l'élément #vaporwave au chargement de la page
 			vaporwave.classList.add("start");
 
 			const options = {
 				root: null,
 				rootMargin: "0px",
-				threshold: 0, // Pourcentage de l'élément qui doit être visible pour déclencher l'animation
+				threshold: 0,
 			};
 
 			const observer = new IntersectionObserver(function (entries, observer) {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
-						vaporwave.classList.add("animate"); // Ajoute une classe CSS pour déclencher l'animation
-						observer.unobserve(entry.target); // Arrête l'observation une fois que l'élément a été animé
+						vaporwave.classList.add("animate");
+						observer.unobserve(entry.target);
 					}
 				});
 			}, options);

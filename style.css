@@ -940,13 +940,17 @@ ul {
 	.svgContainerZc svg,
 	.svgContainerLd svg {
 		position: absolute;
-		top: 10vw;
+		top: 20vw;
 		left: 0vw;
 		height: 50vh;
 	}
 
 	.svgContainerZc svg {
-		top: 20vw;
+		top: 18vh;
+	}
+
+	.svgContainerLd svg {
+		top: 15vh;
 	}
 
 	.info-container {
@@ -962,7 +966,11 @@ ul {
 	}
 
 	.info-containerZc {
-		top: 55vh;
+		top: 65vh;
+	}
+
+	.info-containerLd {
+		top: 60vh;
 	}
 
 	.utilities {
@@ -974,7 +982,7 @@ ul {
 
 	.utilities h2 {
 		font-size: 20px;
-		max-width: 90vw;
+		text-align: center;
 	}
 
 	ul {
@@ -983,6 +991,14 @@ ul {
 
 	li {
 		font-size: 18px;
+	}
+
+	.techContent {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		font-size: 20px;
+		width: 100%;
 	}
 
 	.singleProduct h1 {
@@ -1018,7 +1034,7 @@ ul {
 
 	.svgContainerVw svg {
 		position: absolute;
-		top: -4vh;
+		top: 10vh;
 		left: 0vw;
 		height: 100vh;
 		width: 100vw;

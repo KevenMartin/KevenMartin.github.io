@@ -39,14 +39,6 @@
 		<div class="info-container info-containerZc">
 			<p>Le but de ce projet était de reproduire une maquette visuelle que mon enseignant a fait. Ce fut le premier projet que j'ai réalisé a l'aide de HTML et CSS, j'ai fait beaucoup de progrès depuis.</p>
 		</div>
-		<!-- 		<div class="utilities">
-			<h2>LANGAGES UTILISÉS pour ce projet</h2>
-			<ul>
-				<li>html</li>
-				<li>css</li>
-			</ul>
-			<br />
-		</div> -->
 		<div class="singleProduct">
 			<div class="img-container">
 				<img id="imgPortfolio" src="/img/zencafe/Section1.PNG" alt="" />
@@ -60,29 +52,22 @@
 		<script>
 			const rose = document.querySelectorAll("#zencafe path");
 
-			console.log(rose);
-
-			for (let i = 0; i < rose.length; i++) {
-				console.log(`Letter ${i} is ${rose[i].getTotalLength()}`);
-			}
-
 			const zencafe = document.querySelector("#zencafe");
 			const pathElements = zencafe.querySelectorAll("path");
 
-			// Ajoute la classe 'start' à l'élément #zencafe au chargement de la page
 			zencafe.classList.add("start");
 
 			const options = {
 				root: null,
 				rootMargin: "0px",
-				threshold: 0, // Pourcentage de l'élément qui doit être visible pour déclencher l'animation
+				threshold: 0,
 			};
 
 			const observer = new IntersectionObserver(function (entries, observer) {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
-						zencafe.classList.add("animate"); // Ajoute une classe CSS pour déclencher l'animation
-						observer.unobserve(entry.target); // Arrête l'observation une fois que l'élément a été animé
+						zencafe.classList.add("animate");
+						observer.unobserve(entry.target);
 					}
 				});
 			}, options);

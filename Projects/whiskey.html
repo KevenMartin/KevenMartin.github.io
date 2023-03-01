@@ -43,15 +43,6 @@
 			</div>
 			<div class="utilities">
 				<h2>LANGAGES/FRAMEWORKS/logiciels UTILISÉS pour ce projet</h2>
-				<!-- 				<ul>
-					<li>Vue 3</li>
-					<li>Typescript</li>
-					<li>html</li>
-					<li>css</li>
-					<li>pinia</li>
-					<li>mongodb</li>
-					<li>adobe xd pour la maquette</li>
-				</ul> -->
 				<div class="techContent">
 					<p>Vue 3</p>
 					<p>-</p>
@@ -77,14 +68,14 @@
 					<img id="imgPortfolio" src="/img//whiskey/Products.PNG" alt="" />
 				</div>
 				<br />
-				<h1>Consultation d'un produit ...</h1>
+				<!-- 				<h1>Consultation d'un produit ...</h1> -->
 				<div class="img-container">
 					<img id="imgPortfolio" src="/img//whiskey/singleProduct/product1.png" alt="" />
 					<img id="imgPortfolio" src="/img//whiskey/singleProduct/product2v2.png" alt="" />
 					<img id="imgPortfolio" src="/img//whiskey/singleProduct/product3v2.png" alt="" />
 				</div>
 				<br />
-				<h1>Consultation du profil ...</h1>
+				<!-- 				<h1>Consultation du profil ...</h1> -->
 				<div class="img-container">
 					<img id="imgPortfolio" src="/img/whiskey/account1.PNG" alt="" />
 					<img id="imgPortfolio" src="/img/whiskey/account2.PNG" alt="" />
@@ -94,8 +85,6 @@
 		<script>
 			const rose = document.querySelectorAll("#whiskey path");
 
-			console.log(rose);
-
 			for (let i = 0; i < rose.length; i++) {
 				console.log(`Letter ${i} is ${rose[i].getTotalLength()}`);
 			}
@@ -103,20 +92,19 @@
 			const whiskey = document.querySelector("#whiskey");
 			const pathElements = whiskey.querySelectorAll("path");
 
-			// Ajoute la classe 'start' à l'élément #whiskey au chargement de la page
 			whiskey.classList.add("start");
 
 			const options = {
 				root: null,
 				rootMargin: "0px",
-				threshold: 0, // Pourcentage de l'élément qui doit être visible pour déclencher l'animation
+				threshold: 0,
 			};
 
 			const observer = new IntersectionObserver(function (entries, observer) {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
-						whiskey.classList.add("animate"); // Ajoute une classe CSS pour déclencher l'animation
-						observer.unobserve(entry.target); // Arrête l'observation une fois que l'élément a été animé
+						whiskey.classList.add("animate");
+						observer.unobserve(entry.target);
 					}
 				});
 			}, options);
