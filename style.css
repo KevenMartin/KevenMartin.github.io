@@ -386,7 +386,6 @@ svg {
 
 .projectTitle h1 {
 	font-size: 5vw;
-	font-weight: 200;
 }
 
 .projectWrapper {
@@ -897,7 +896,6 @@ ul {
 	.projectTitle h1 {
 		font-size: 46px;
 		text-align: center;
-		font-weight: 300;
 	}
 
 	.projectWrapper h1 {
