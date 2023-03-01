@@ -535,6 +535,14 @@ svg {
 	z-index: 999999;
 }
 
+.mobileContainer {
+	margin: 0rem 2rem;
+}
+
+.techContentMobile {
+	display: none;
+}
+
 nav {
 	z-index: 9999999;
 	margin: 0rem 2rem;
@@ -946,7 +954,7 @@ ul {
 	}
 
 	.p-title {
-		font-size: 80px;
+		font-size: 60px;
 		text-align: center;
 	}
 
@@ -1017,6 +1025,7 @@ ul {
 	.techContentMobile {
 		text-decoration: none;
 		font-size: 24px;
+		display: block;
 	}
 
 	.singleProduct h1 {
