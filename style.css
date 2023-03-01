@@ -803,6 +803,11 @@ ul {
 
 /* Smartphones en orientation portrait */
 @media only screen and (max-width: 480px) {
+	.bg,
+	.shape {
+		display: none;
+	}
+
 	body {
 		/* 		height: 100% !important; */
 	}
@@ -813,6 +818,7 @@ ul {
 
 	#mobile {
 		display: block;
+		margin: 0px 15px;
 	}
 
 	.title {
@@ -835,13 +841,21 @@ ul {
 	.title p {
 		font-size: 24px;
 		letter-spacing: 2px;
-		line-height: auto;
+		line-height: 50px;
 		font-weight: 100;
 		width: 100%;
 	}
 
+	.compInfos {
+		display: flex;
+		flex-direction: column;
+	}
+
 	.lineInfo {
+		display: flex;
+		flex-direction: row;
 		font-size: 12px;
+		font-size: 24px;
 	}
 
 	.skillsContainer {
@@ -859,9 +873,9 @@ ul {
 	}
 
 	.skillsTitleMobile {
+		font-size: 46px;
+		display: block;
 		text-align: center;
-		margin: 0;
-		font-size: 20vw;
 	}
 
 	.skillsTitle h1 {
@@ -869,7 +883,8 @@ ul {
 	}
 
 	.skillsList {
-		width: 100vw !important;
+		font-size: 24px;
+		margin: 0px 15px;
 	}
 
 	#rose {
@@ -880,8 +895,9 @@ ul {
 	}
 
 	.projectTitle h1 {
-		font-size: 28px;
-		text-decoration: underline;
+		font-size: 46px;
+		text-align: center;
+		font-weight: 300;
 	}
 
 	.projectWrapper h1 {
