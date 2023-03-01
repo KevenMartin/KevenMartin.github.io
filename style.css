@@ -975,7 +975,7 @@ ul {
 
 	.info-container {
 		position: block;
-		top: 55vh;
+		top: 65vh;
 		height: 100%;
 		width: 90vw;
 		line-height: 4vh;
@@ -1005,20 +1005,18 @@ ul {
 		text-align: center;
 	}
 
-	ul {
-		list-style: none;
-	}
-
-	li {
-		font-size: 18px;
-	}
-
 	.techContent {
-		display: flex;
+		/* 		display: flex;
 		flex-direction: row;
 		justify-content: space-evenly;
 		font-size: 18px;
-		width: 100%;
+		width: 100%; */
+		display: none;
+	}
+
+	.techContentMobile {
+		text-decoration: none;
+		font-size: 24px;
 	}
 
 	.singleProduct h1 {
