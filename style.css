@@ -651,6 +651,10 @@ ul {
 
 /*-------VAPORWAVE------*/
 
+.containerVaporwave {
+	margin: 0rem 2rem;
+}
+
 .svgContainerVw {
 	height: 100vh;
 }
@@ -727,6 +731,10 @@ ul {
 
 /*------ZENCAFE------*/
 
+.containerZc {
+	margin: 0rem 2rem;
+}
+
 .svgContainerVw {
 	height: 100vh;
 }
@@ -745,33 +753,38 @@ ul {
 }
 
 #zencafe.animate path {
-	animation: line-animation 1s ease forwards;
+	animation: line-animation 4s ease forwards;
 }
 
 #zencafe path:nth-child(1) {
 	stroke-dasharray: 4428;
 	stroke-dashoffset: 4428;
-	animation-delay: 0s;
+	animation-delay: 2.5s;
 }
 
 #zencafe path:nth-child(2) {
 	stroke-dasharray: 1624;
 	stroke-dashoffset: 1624;
+	animation-delay: 1s;
 }
 
 #zencafe path:nth-child(3) {
 	stroke-dasharray: 623;
 	stroke-dashoffset: 623;
-	animation-delay: 0s;
+	animation-delay: 3s;
 }
 
 #zencafe path:nth-child(4) {
 	stroke-dasharray: 623;
 	stroke-dashoffset: 623;
-	animation-delay: 0s;
+	animation-delay: 3.5s;
 }
 
 /*------LEDOR-----*/
+
+.containerLd {
+	margin: 0rem 2rem;
+}
 
 .svgContainerLd {
 	height: 100vh;
@@ -803,7 +816,7 @@ ul {
 #ledor path:nth-child(2) {
 	stroke-dasharray: 3242;
 	stroke-dashoffset: 3242;
-	animation-delay: 2s;
+	animation-delay: 2.5s;
 }
 
 /*-----------------------------RESPONSIVE----------------------------------*/
@@ -1055,7 +1068,7 @@ ul {
 	}
 
 	.containerVaporwave {
-		max-height: 100vh !important;
+		max-height: 50vh !important;
 		overflow-y: hidden;
 	}
 
