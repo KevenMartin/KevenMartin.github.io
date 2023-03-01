@@ -166,9 +166,9 @@ nav .links a {
 
 /*-----------------------------COMPÉTENCES----------------------------------*/
 
-/* .compContainer {
-	height: 100vh;
-} */
+.compContainer {
+	margin-top: 10rem;
+}
 
 /* .compTitle {
 	display: flex;
@@ -1055,6 +1055,7 @@ ul {
 	.img-container {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 	}
 
 	#imgPortfolio {
