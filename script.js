@@ -1,30 +1,18 @@
 window.addEventListener("scroll", function (e) {
 	const target = this.document.querySelectorAll(".scroll");
 
-	let scrolledX = window.pageXOffset;
-	let scrolledY = window.pageYOffset;
-	const totalHeight = document.body.clientHeight - window.innerHeight;
-	const totalWidth = document.body.clientWidth - window.innerWidth;
-
-	// Prevent infinite vertical scrolling
-	if (scrolledY >= totalHeight) {
-		return;
-	}
-
-	// Prevent infinite horizontal scrolling
-	if (scrolledX >= totalWidth) {
-		return;
-	}
-
+	let scrolled = window.pageYOffset;
 	let index = 0,
 		length = target.length;
 	for (index; index < length; index++) {
-		let posX = window.pageXOffset * target[index].dataset.ratex;
-		let posY = window.pageYOffset * target[index].dataset.ratey;
+		let pos = window.pageYOffset * target[index].dataset.rate;
 
 		if (target[index].dataset.direction === "vertical") {
-			target[index].style.transform = "translate3d(0px, " + posY + "px, 0px )";
+			target[index].style.transform = "translate3d(0px, " + pos + "px, 0px )";
 		} else {
+			let posX = window.pageYOffset * target[index].dataset.ratex;
+			let posY = window.pageYOffset * target[index].dataset.ratey;
+
 			target[index].style.transform = "translate3d(" + posX + "px, " + posY + "px, 0px )";
 		}
 	}
