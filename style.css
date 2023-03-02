@@ -93,7 +93,7 @@ body {
 	padding: 0;
 	background-color: antiquewhite;
 	color: black;
-	font-family: "futura", "Nunito Sans", "Didact Gothic", "Questrial", sans-serif;
+	font-family: "Nunito Sans", "Didact Gothic", "Questrial", sans-serif;
 	overflow-x: hidden;
 	text-transform: uppercase;
 	margin-top: 2rem;
@@ -150,6 +150,9 @@ nav .links a {
 }
 
 .firstRowTitle p {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 4vh;
 	width: 30%;
 }
 
