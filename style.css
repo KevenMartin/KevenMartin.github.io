@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
 
 #shape {
 	background: linear-gradient(64deg, #00ffb6 10%, #ff006f 60%);
@@ -91,7 +92,7 @@ body {
 	padding: 0;
 	background-color: antiquewhite;
 	color: black;
-	font-family: futura;
+	font-family: "futura", "Questrial", sans-serif;
 	overflow-x: hidden;
 	text-transform: uppercase;
 	margin-top: 2rem;
@@ -161,7 +162,6 @@ nav .links a {
 	margin-top: 10rem;
 }
 
-
 svg {
 	width: 100vw;
 	height: 12vw;
@@ -170,7 +170,6 @@ svg {
 #competences.animate {
 	animation: fill 1s ease forwards 3s;
 }
-
 
 #competences.animate path {
 	animation: line-animation 2s ease forwards;
@@ -1078,7 +1077,6 @@ ul {
 
 /* Smartphones en orientation paysage */
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-
 }
 
 /* Tablettes en orientation portrait */
